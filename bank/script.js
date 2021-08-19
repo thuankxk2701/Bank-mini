@@ -218,7 +218,7 @@ btnSort.addEventListener('click', function (e) {
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 // SLICE METHOD
@@ -434,20 +434,22 @@ GOOD LUCK 😀*/
 // // Array Descending
 // const arr3 = arr.sort((a, b) => b - a);
 // console.log(arr3);
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(new Array(1, 2, 3, 4, 5, 6, 7, 8));
-const x = new Array(7);
-console.log(x);
-// console.log(x.map(() => 5));
-arr.fill(1);
-console.log(arr);
-x.fill(1);
-console.log(x);
-// Array from
-const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
-const z = Array.from({ length: 7 }, (_, i) => i + 1);
-console.log(z);
+
+// -------- Test quetion------//
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7, 8));
+// const x = new Array(7);
+// console.log(x);
+// // console.log(x.map(() => 5));
+// arr.fill(1);
+// console.log(arr);
+// x.fill(1);
+// console.log(x);
+// // Array from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
+// const z = Array.from({ length: 7 }, (_, i) => i + 1);
+// console.log(z);
 // const t = Array.from({ length: 100 }, () =>
 //   Math.trunc(Math.floor(Math.random() * 100) + 1)
 // );
@@ -459,41 +461,41 @@ console.log(z);
 //   );
 //   console.log(movementsUI);
 // });
-const bankDespositSum = accounts
-  .flatMap(acc => acc.movements)
-  .filter(mov => mov > 0)
-  .reduce((acc, cur) => acc + cur, 0);
-console.log(bankDespositSum);
-const numDeposits1000 = accounts
-  .flatMap(acc => acc.movements)
-  .reduce((mov, cur) => (cur >= 1000 ? ++mov : mov), 0);
-console.log(numDeposits1000);
-let a = 10;
-console.log(a++);
+// const bankDespositSum = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov > 0)
+//   .reduce((acc, cur) => acc + cur, 0);
+// console.log(bankDespositSum);
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce((mov, cur) => (cur >= 1000 ? ++mov : mov), 0);
+// console.log(numDeposits1000);
+// let a = 10;
+// console.log(a++);
 
-/// 3
-const { deposits, withdrawals } = accounts
-  .flatMap(acc => acc.movements)
-  .reduce(
-    (sums, cur) => {
-      sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
-      return sums;
-    },
-    { deposits: 0, withdrawals: 0 }
-  );
-console.log(deposits, withdrawals);
-//4
-const convertTitleCase = function (title) {
-  const exceptions = ['a', 'an', 'but', 'or', 'on', 'in', 'with', 'and', 'not'];
-  const titleCase = title
-    .toLowerCase()
-    .split(' ')
-    .map(word =>
-      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
-    )
-    .join(' ');
-  return titleCase;
-};
-console.log(convertTitleCase('this is a nice title'));
-console.log(convertTitleCase('this is a LONG title but not too long'));
-console.log(convertTitleCase('and here is another title with an EXAMPLE'));
+// /// 3
+// const { deposits, withdrawals } = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce(
+//     (sums, cur) => {
+//       sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+//       return sums;
+//     },
+//     { deposits: 0, withdrawals: 0 }
+//   );
+// console.log(deposits, withdrawals);
+// //4
+// const convertTitleCase = function (title) {
+//   const exceptions = ['a', 'an', 'but', 'or', 'on', 'in', 'with', 'and', 'not'];
+//   const titleCase = title
+//     .toLowerCase()
+//     .split(' ')
+//     .map(word =>
+//       exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+//     )
+//     .join(' ');
+//   return titleCase;
+// };
+// console.log(convertTitleCase('this is a nice title'));
+// console.log(convertTitleCase('this is a LONG title but not too long'));
+// console.log(convertTitleCase('and here is another title with an EXAMPLE'));
